@@ -268,27 +268,32 @@
     </sv:property>
     <sv:node sv:name="main">
       <sv:property sv:name="jcr:primaryType" sv:type="Name">
-        <sv:value>hst:containercomponent</sv:value>
+        <sv:value>hst:containercomponentfolder</sv:value>
       </sv:property>
-      <sv:property sv:name="hst:label" sv:type="String">
-        <sv:value>Content Page Main</sv:value>
-      </sv:property>
-      <sv:property sv:name="hst:xtype" sv:type="String">
-        <sv:value>hst.nomarkup</sv:value>
-      </sv:property>
-      <sv:node sv:name="content">
+      <sv:node sv:name="left">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:containeritemcomponent</sv:value>
+          <sv:value>hst:containercomponent</sv:value>
         </sv:property>
-        <sv:property sv:name="hst:componentclassname" sv:type="String">
-          <sv:value>org.onehippo.cms7.essentials.components.EssentialsContentComponent</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:template" sv:type="String">
-          <sv:value>contentpage-main</sv:value>
+        <sv:property sv:name="hst:label" sv:type="String">
+          <sv:value>Content Page Main</sv:value>
         </sv:property>
         <sv:property sv:name="hst:xtype" sv:type="String">
-          <sv:value>hst.item</sv:value>
+          <sv:value>hst.nomarkup</sv:value>
         </sv:property>
+        <sv:node sv:name="content">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:containeritemcomponent</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentclassname" sv:type="String">
+            <sv:value>org.onehippo.cms7.essentials.components.EssentialsContentComponent</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>contentpage-main</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:xtype" sv:type="String">
+            <sv:value>hst.item</sv:value>
+          </sv:property>
+        </sv:node>
       </sv:node>
     </sv:node>
   </sv:node>

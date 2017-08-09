@@ -242,9 +242,9 @@
     </div>
 </div>
 
-<script src="<@hst.webfile path="/js/jquery-2.1.0.min.js" type="text/javascript"/>"></script>
-<script src="<@hst.webfile path="/js/bootstrap.min.js" type="text/javascript"/>"></script>
-<script src="<@hst.webfile path="/js/kanzi-menu.js" type="text/javascript"/>"></script>
+<script src="<@hst.webfile path="/js/jquery-2.1.0.min.js"/>" type="text/javascript"></script>
+<script src="<@hst.webfile path="/js/bootstrap.min.js"/>" type="text/javascript"></script>
+<script src="<@hst.webfile path="/js/kanzi-menu.js"/>" type="text/javascript"></script>
 
 <@hst.headContributions categoryIncludes="htmlBodyEnd" xhtml=true/>
 
