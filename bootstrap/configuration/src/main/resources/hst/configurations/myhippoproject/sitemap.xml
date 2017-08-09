@@ -3,7 +3,7 @@
     <sv:value>hst:sitemap</sv:value>
   </sv:property>
   <sv:property sv:name="hst:lastmodified" sv:type="Date">
-    <sv:value>2017-08-08T17:27:16.564+07:00</sv:value>
+    <sv:value>2017-08-09T16:21:07.378+07:00</sv:value>
   </sv:property>
   <sv:property sv:name="hst:lastmodifiedby" sv:type="String">
     <sv:value>admin</sv:value>
@@ -128,6 +128,32 @@
     <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
     <sv:property sv:name="hst:relativecontentpath" sv:type="String">
       <sv:value>content/about</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="quick-facts">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemapitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+      <sv:value>hst:pages/contentpage</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+      <sv:value>content/quick-facts</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="terms--conditions">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemapitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+      <sv:value>hst:pages/contentpage</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true"/>
+    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+      <sv:value>content/terms--conditions</sv:value>
     </sv:property>
   </sv:node>
 </sv:node>
