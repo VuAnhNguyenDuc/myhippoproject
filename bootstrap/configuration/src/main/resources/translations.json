@@ -1,0 +1,169 @@
+{
+  "hippo:templates":   {
+    "en":     {
+      "new-banner-folder": "new banner folder",
+      "new-banner-document": "new banner document",
+      "new-content-folder": "new content folder",
+      "new-news-document": "new news item",
+      "new-content-document": "new content document",
+      "new-resource-bundle": "new resource bundle",
+      "new-news-folder": "new news item folder",
+      "new-untranslated-folder": "new untranslated folder",
+      "new-myhippoproject-imageset-image": "New Image",
+      "new-myhippoproject-imageset-folder": "new folder"
+    },
+    "nl":     {
+      "new-banner-folder": "nieuwe banner map",
+      "new-banner-document": "nieuwe banner",
+      "new-content-folder": "nieuwe contentmap",
+      "new-content-document": "nieuw content document",
+      "new-news-document": "nieuw nieuwsbericht",
+      "new-resource-bundle": "nieuwe resource bundle",
+      "new-news-folder": "nieuwe nieuwsmap",
+      "new-untranslated-folder": "nieuwe onvertaalde map",
+      "new-myhippoproject-imageset-image": "Nieuwe Afbeelding",
+      "new-myhippoproject-imageset-folder": "nieuwe map"
+    },
+    "de":     {
+      "new-banner-folder": "Neuer Banner-Ordner",
+      "new-banner-document": "Neues Banner",
+      "new-content-folder": "Neuer Content-Ordner",
+      "new-news-document": "Neue News",
+      "new-content-document": "Neues Content-Document",
+      "new-resource-bundle": "Neues Resource-Bundle",
+      "new-news-folder": "Neuer News-Ordner",
+      "new-untranslated-folder": "Neuer nicht übersetzter Ordner",
+      "new-myhippoproject-imageset-image": "Neues Bild",
+      "new-myhippoproject-imageset-folder": "Neuer Ordner"
+    },
+    "es":     {
+      "new-myhippoproject-imageset-image": "Nueva imagen",
+      "new-myhippoproject-imageset-folder": "nueva carpeta"
+    },
+    "fr":     {
+      "new-banner-folder": "nouveau dossier bannière",
+      "new-banner-document": "nouvelle bannière",
+      "new-content-folder": "nouveau dossier contenu",
+      "new-news-document": "nouveau message d'info",
+      "new-content-document": "nouveau document contenu",
+      "new-resource-bundle": "nouveau resource bundle",
+      "new-news-folder": "nouveau dossier messages d'info",
+      "new-untranslated-folder": "nouveau dossier non traduit",
+      "new-myhippoproject-imageset-image": "Nouvelle image",
+      "new-myhippoproject-imageset-folder": "un nouveau dossier"
+    },
+    "zh":     {
+      "new-myhippoproject-imageset-image": "新图片",
+      "new-myhippoproject-imageset-folder": "新文件夹"
+    }
+  },
+  "hippo:types":   {
+    "myhippoproject:bannerdocument":     {
+      "en":       {
+        "myhippoproject:content": "Content",
+        "myhippoproject:title": "Title",
+        "jcr:name": "Banner",
+        "myhippoproject:link": "Link",
+        "myhippoproject:image": "Image"
+      },
+      "nl":       {
+        "myhippoproject:content": "Inhoud",
+        "myhippoproject:title": "Titel",
+        "jcr:name": "Banner",
+        "myhippoproject:link": "Link",
+        "myhippoproject:image": "Afbeelding"
+      },
+      "fr":       {
+        "myhippoproject:content": "Contenu",
+        "myhippoproject:title": "Titre",
+        "jcr:name": "Bannière",
+        "myhippoproject:link": "Lien",
+        "myhippoproject:image": "Image"
+      },
+      "de":       {
+        "myhippoproject:content": "Inhalt",
+        "myhippoproject:title": "Titel",
+        "jcr:name": "Banner",
+        "myhippoproject:link": "Link",
+        "myhippoproject:image": "Abbildung"
+      }
+    },
+    "myhippoproject:newsdocument":     {
+      "en":       {
+        "myhippoproject:source": "Source",
+        "jcr:name": "News Item",
+        "myhippoproject:author": "Author",
+        "myhippoproject:location": "Location",
+        "myhippoproject:image": "Image",
+        "myhippoproject:content": "Content",
+        "myhippoproject:title": "Title",
+        "myhippoproject:date": "Date",
+        "myhippoproject:introduction": "Introduction"
+      },
+      "nl":       {
+        "myhippoproject:source": "Bron",
+        "jcr:name": "Nieuwsbericht",
+        "myhippoproject:author": "Auteur",
+        "myhippoproject:location": "Locatie",
+        "myhippoproject:image": "Afbeelding",
+        "myhippoproject:content": "Inhoud",
+        "myhippoproject:title": "Titel",
+        "myhippoproject:date": "Datum",
+        "myhippoproject:introduction": "Introductie"
+      },
+      "de":       {
+        "myhippoproject:source": "Quelle",
+        "jcr:name": "News",
+        "myhippoproject:author": "Verfasser",
+        "myhippoproject:location": "Standort",
+        "myhippoproject:image": "Abbildung",
+        "myhippoproject:content": "Inhalt",
+        "myhippoproject:title": "Titel",
+        "myhippoproject:date": "Datum",
+        "myhippoproject:introduction": "Einführung"
+      },
+      "fr":       {
+        "myhippoproject:source": "Source",
+        "jcr:name": "Message d'info",
+        "myhippoproject:author": "Auteur",
+        "myhippoproject:location": "Lieu",
+        "myhippoproject:image": "Image",
+        "myhippoproject:content": "Contenu",
+        "myhippoproject:title": "Titre",
+        "myhippoproject:date": "Date",
+        "myhippoproject:introduction": "Introduction"
+      }
+    },
+    "myhippoproject:contentdocument":     {
+      "en":       {
+        "myhippoproject:content": "Content",
+        "myhippoproject:title": "Title",
+        "jcr:name": "Simple Document",
+        "myhippoproject:publicationdate": "Publication date",
+        "myhippoproject:introduction": "Introduction"
+      },
+      "nl":       {
+        "myhippoproject:content": "Inhoud",
+        "myhippoproject:title": "Titel",
+        "jcr:name": "Eenvoudig Document",
+        "myhippoproject:publicationdate": "Publicatiedatum",
+        "myhippoproject:introduction": "Introductie"
+      },
+      "fr":       {
+        "myhippoproject:content": "Contenu",
+        "myhippoproject:title": "Titre",
+        "jcr:name": "Document simple",
+        "myhippoproject:publicationdate": "Date de publication",
+        "myhippoproject:introduction": "Introduction"
+      },
+      "de":       {
+        "myhippoproject:content": "Inhalt",
+        "myhippoproject:title": "Titel",
+        "jcr:name": "Einfaches Dokument",
+        "myhippoproject:publicationdate": "Publikationsdatum",
+        "myhippoproject:introduction": "Einführung"
+      }
+    },
+    "myhippoproject:imageset": {}
+  }
+}

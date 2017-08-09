@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/myhippoproject.iml" filepath="$PROJECT_DIR$/myhippoproject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bootstrap/myhippoproject-bootstrap.iml" filepath="$PROJECT_DIR$/bootstrap/myhippoproject-bootstrap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bootstrap/configuration/myhippoproject-bootstrap-configuration.iml" filepath="$PROJECT_DIR$/bootstrap/configuration/myhippoproject-bootstrap-configuration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bootstrap/content/myhippoproject-bootstrap-content.iml" filepath="$PROJECT_DIR$/bootstrap/content/myhippoproject-bootstrap-content.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bootstrap/webfiles/myhippoproject-bootstrap-webfiles.iml" filepath="$PROJECT_DIR$/bootstrap/webfiles/myhippoproject-bootstrap-webfiles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cms/myhippoproject-cms.iml" filepath="$PROJECT_DIR$/cms/myhippoproject-cms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/essentials/myhippoproject-essentials.iml" filepath="$PROJECT_DIR$/essentials/myhippoproject-essentials.iml" />
+      <module fileurl="file://$PROJECT_DIR$/site/myhippoproject-site.iml" filepath="$PROJECT_DIR$/site/myhippoproject-site.iml" />
+    </modules>
+  </component>
+</project>
