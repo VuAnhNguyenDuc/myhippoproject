@@ -156,4 +156,15 @@
       <sv:value>content/terms--conditions</sv:value>
     </sv:property>
   </sv:node>
+  <sv:node sv:name="products">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:sitemapitem</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
+      <sv:value>hst:pages/productslist</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+      <sv:value>products</sv:value>
+    </sv:property>
+  </sv:node>
 </sv:node>
