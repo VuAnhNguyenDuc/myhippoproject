@@ -4,6 +4,7 @@ import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerat
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoHtml;
 import org.example.beans.Imageset;
+import java.util.List;
 
 @HippoEssentialsGenerated(internalName = "myhippoproject:product")
 @Node(jcrType = "myhippoproject:product")
@@ -29,7 +30,7 @@ public class Product extends BaseDocument {
     }
 
     @HippoEssentialsGenerated(internalName = "myhippoproject:images")
-    public Imageset getImages() {
-        return getLinkedBean("myhippoproject:images", Imageset.class);
+    public List<Imageset> getImages() {
+        return getLinkedBeans("myhippoproject:images", Imageset.class);
     }
 }
