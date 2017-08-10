@@ -114,4 +114,12 @@
       <sv:value>webfile:/freemarker/myhippoproject/featured-products.ftl</sv:value>
     </sv:property>
   </sv:node>
+  <sv:node sv:name="faceted-navigation">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>webfile:/freemarker/myhippoproject/faceted-navigation.ftl</sv:value>
+    </sv:property>
+  </sv:node>
 </sv:node>
