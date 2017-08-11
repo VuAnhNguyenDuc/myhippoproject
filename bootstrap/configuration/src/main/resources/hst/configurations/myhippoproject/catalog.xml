@@ -23,5 +23,22 @@
         <sv:value>hst.item</sv:value>
       </sv:property>
     </sv:node>
+    <sv:node sv:name="custom-products">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hst:containeritemcomponent</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:componentclassname" sv:type="String">
+        <sv:value>org.example.components.EssentialsCustomComponent</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:label" sv:type="String">
+        <sv:value>Custom Products Bitch</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:template" sv:type="String">
+        <sv:value>custom-products</sv:value>
+      </sv:property>
+      <sv:property sv:name="hst:xtype" sv:type="String">
+        <sv:value>hst.item</sv:value>
+      </sv:property>
+    </sv:node>
   </sv:node>
 </sv:node>

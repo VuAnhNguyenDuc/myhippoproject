@@ -41,7 +41,7 @@
         <sv:value>Home Page Main</sv:value>
       </sv:property>
       <sv:property sv:name="hst:lastmodified" sv:type="Date">
-        <sv:value>2017-08-10T10:28:24.428+07:00</sv:value>
+        <sv:value>2017-08-11T16:00:08.406+07:00</sv:value>
       </sv:property>
       <sv:property sv:name="hst:xtype" sv:type="String">
         <sv:value>hst.nomarkup</sv:value>
@@ -124,11 +124,11 @@
           <sv:value/>
           <sv:value/>
           <sv:value/>
-          <sv:value>products/product1</sv:value>
-          <sv:value>products/product3</sv:value>
+          <sv:value/>
           <sv:value>products/product3</sv:value>
           <sv:value/>
-          <sv:value>products/product2</sv:value>
+          <sv:value/>
+          <sv:value/>
           <sv:value>10</sv:value>
           <sv:value>off</sv:value>
           <sv:value>products/product2</sv:value>
@@ -136,6 +136,29 @@
         </sv:property>
         <sv:property sv:name="hst:template" sv:type="String">
           <sv:value>featured-products</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:xtype" sv:type="String">
+          <sv:value>hst.item</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="custom-products">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>hst:containeritemcomponent</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:componentclassname" sv:type="String">
+          <sv:value>org.example.components.EssentialsCustomComponent</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:label" sv:type="String">
+          <sv:value>Custom Products Bitch</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+          <sv:value>document</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+          <sv:value>products</sv:value>
+        </sv:property>
+        <sv:property sv:name="hst:template" sv:type="String">
+          <sv:value>custom-products</sv:value>
         </sv:property>
         <sv:property sv:name="hst:xtype" sv:type="String">
           <sv:value>hst.item</sv:value>

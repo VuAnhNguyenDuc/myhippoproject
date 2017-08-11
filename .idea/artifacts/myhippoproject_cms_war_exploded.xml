@@ -16,7 +16,6 @@
           <element id="library" level="project" name="Maven: org.onehippo.cms7:hippo-cms7-utilities:3.2.0" />
           <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.6" />
           <element id="library" level="project" name="Maven: org.onehippo.cms7:hippo-services-webfiles:3.2.0" />
-          <element id="library" level="project" name="Maven: commons-io:commons-io:2.4" />
           <element id="library" level="project" name="Maven: org.apache.jackrabbit.vault:org.apache.jackrabbit.vault:3.1.6" />
           <element id="library" level="project" name="Maven: org.apache.tika:tika-core:1.3" />
           <element id="library" level="project" name="Maven: org.onehippo.cms7:hippo-services-contenttype:3.2.0" />
@@ -52,10 +51,8 @@
           <element id="library" level="project" name="Maven: org.wicketstuff:wicketstuff-input-events:6.19.0" />
           <element id="library" level="project" name="Maven: org.imgscalr:imgscalr-lib:4.2" />
           <element id="library" level="project" name="Maven: org.apache.sanselan:sanselan:0.97-incubator" />
-          <element id="library" level="project" name="Maven: com.google.guava:guava:16.0.1" />
           <element id="library" level="project" name="Maven: org.onehippo.cms7:hippo-cms-engine:4.2.2" />
           <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.4" />
-          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.7.0" />
           <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-rs-client:3.1.6" />
           <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-transports-http:3.1.6" />
           <element id="library" level="project" name="Maven: org.apache.cxf:cxf-core:3.1.6" />
@@ -162,6 +159,15 @@
           <element id="archive" name="myhippoproject-bootstrap-webfiles-0.1.0-SNAPSHOT.jar">
             <element id="module-output" name="myhippoproject-bootstrap-webfiles" />
           </element>
+          <element id="library" level="project" name="Maven: org.onehippo.cms7.hst:hst-client:4.2.1" />
+          <element id="library" level="project" name="Maven: org.onehippo.cms7.hst:hst-content-beans:4.2.1" />
+          <element id="library" level="project" name="Maven: org.onehippo.cms7.hst.components:hst-rewriter:4.2.1" />
+          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.8.0" />
+          <element id="library" level="project" name="Maven: commons-configuration:commons-configuration:1.7" />
+          <element id="library" level="project" name="Maven: commons-digester:commons-digester:1.8.1" />
+          <element id="library" level="project" name="Maven: com.google.guava:guava:16.0.1" />
+          <element id="library" level="project" name="Maven: org.apache.james:apache-mime4j:0.6" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:2.4" />
           <element id="library" level="project" name="Maven: org.onehippo.cms7:hippo-plugin-gallerypicker:3.2.0" />
           <element id="library" level="project" name="Maven: org.onehippo.cms7:hippo-plugin-resourcebundle-editor:3.2.0" />
           <element id="library" level="project" name="Maven: org.onehippo.cms7:hippo-plugin-selections-addon-cms:4.2.0" />
