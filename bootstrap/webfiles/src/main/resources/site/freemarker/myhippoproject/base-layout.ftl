@@ -42,7 +42,7 @@
 
                                 <li class="active"><i class="fa fa-ellipsis-h"></i> <span>United States</span>
                                     <ul>
-                                        <li><a href="fr.html">France</a></li>
+                                        <li><a href="/site/fr">France</a></li>
                                     </ul></li>
 
                             </ul>

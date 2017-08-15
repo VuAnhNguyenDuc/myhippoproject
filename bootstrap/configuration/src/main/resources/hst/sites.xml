@@ -10,12 +10,12 @@
       <sv:value>/content/documents/myhippoproject</sv:value>
     </sv:property>
   </sv:node>
-  <sv:node sv:name="monprojethippo">
+  <sv:node sv:name="monprojecthippo">
     <sv:property sv:name="jcr:primaryType" sv:type="Name">
       <sv:value>hst:site</sv:value>
     </sv:property>
     <sv:property sv:name="hst:content" sv:type="String">
-      <sv:value>/content/documents/monprojethippo</sv:value>
+      <sv:value>/content/documents/monprojecthippo</sv:value>
     </sv:property>
   </sv:node>
 </sv:node>

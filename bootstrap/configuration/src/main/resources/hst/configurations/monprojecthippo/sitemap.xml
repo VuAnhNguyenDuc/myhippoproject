@@ -56,7 +56,7 @@
         <sv:value>hst:pages/newspage</sv:value>
       </sv:property>
       <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-        <sv:value>actualites/${1}</sv:value>
+        <sv:value>news/${1}</sv:value>
       </sv:property>
     </sv:node>
     <sv:node sv:name="_any_">

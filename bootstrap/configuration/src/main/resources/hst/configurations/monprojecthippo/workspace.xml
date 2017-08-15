@@ -23,7 +23,7 @@
       <sv:property sv:name="hst:lastmodified" sv:type="Date">
         <sv:value>2017-08-10T09:32:04.521+07:00</sv:value>
       </sv:property>
-      <sv:node sv:name="Accueil">
+      <sv:node sv:name="accueil">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:sitemenuitem</sv:value>
         </sv:property>
@@ -34,7 +34,7 @@
           <sv:value>false</sv:value>
         </sv:property>
       </sv:node>
-      <sv:node sv:name="Actualités">
+      <sv:node sv:name="actualités">
         <sv:property sv:name="jcr:primaryType" sv:type="Name">
           <sv:value>hst:sitemenuitem</sv:value>
         </sv:property>
@@ -44,41 +44,6 @@
         <sv:property sv:name="hst:repobased" sv:type="Boolean">
           <sv:value>false</sv:value>
         </sv:property>
-      </sv:node>
-      <sv:node sv:name="Products">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:sitemenuitem</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>products</sv:value>
-        </sv:property>
-      </sv:node>
-      <sv:node sv:name="About">
-        <sv:property sv:name="jcr:primaryType" sv:type="Name">
-          <sv:value>hst:sitemenuitem</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-          <sv:value>about</sv:value>
-        </sv:property>
-        <sv:property sv:name="hst:repobased" sv:type="Boolean">
-          <sv:value>false</sv:value>
-        </sv:property>
-        <sv:node sv:name="Quick Facts">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hst:sitemenuitem</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-            <sv:value>quick-facts</sv:value>
-          </sv:property>
-        </sv:node>
-        <sv:node sv:name="Terms &amp; Conditions">
-          <sv:property sv:name="jcr:primaryType" sv:type="Name">
-            <sv:value>hst:sitemenuitem</sv:value>
-          </sv:property>
-          <sv:property sv:name="hst:referencesitemapitem" sv:type="String">
-            <sv:value>terms--conditions</sv:value>
-          </sv:property>
-        </sv:node>
       </sv:node>
     </sv:node>
   </sv:node>
@@ -125,7 +90,7 @@
           <sv:value>Home Page Main</sv:value>
         </sv:property>
         <sv:property sv:name="hst:lastmodified" sv:type="Date">
-          <sv:value>2017-08-15T11:24:19.397+07:00</sv:value>
+          <sv:value>2017-08-15T14:40:34.540+07:00</sv:value>
         </sv:property>
         <sv:property sv:name="hst:xtype" sv:type="String">
           <sv:value>hst.nomarkup</sv:value>
@@ -175,6 +140,53 @@
           </sv:property>
           <sv:property sv:name="hst:template" sv:type="String">
             <sv:value>essentials-carousel</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:xtype" sv:type="String">
+            <sv:value>hst.item</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="custom-search">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:containeritemcomponent</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentclassname" sv:type="String">
+            <sv:value>org.example.components.CustomListComponent</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:label" sv:type="String">
+            <sv:value>Custom Search</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parameternames" sv:type="String" sv:multiple="true">
+            <sv:value>lower</sv:value>
+            <sv:value>pageSize</sv:value>
+            <sv:value>showPagination</sv:value>
+            <sv:value>includeSubtypes</sv:value>
+            <sv:value>path</sv:value>
+            <sv:value>documentTypes</sv:value>
+            <sv:value>sortOrder</sv:value>
+            <sv:value>sortField</sv:value>
+            <sv:value>isDate</sv:value>
+            <sv:value>from</sv:value>
+            <sv:value>to</sv:value>
+            <sv:value>keyword</sv:value>
+            <sv:value>higher</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:parametervalues" sv:type="String" sv:multiple="true">
+            <sv:value/>
+            <sv:value>10</sv:value>
+            <sv:value>off</sv:value>
+            <sv:value>off</sv:value>
+            <sv:value>news</sv:value>
+            <sv:value>myhippoproject:News Item</sv:value>
+            <sv:value>desc</sv:value>
+            <sv:value>myhippoproject:date</sv:value>
+            <sv:value>on</sv:value>
+            <sv:value>08-8-2017 16:00</sv:value>
+            <sv:value>08-8-2017 16:00</sv:value>
+            <sv:value/>
+            <sv:value/>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>custom-search</sv:value>
           </sv:property>
           <sv:property sv:name="hst:xtype" sv:type="String">
             <sv:value>hst.item</sv:value>
