@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<sv:node sv:name="hst:hosts" xmlns:sv="http://www.jcp.org/jcr/sv/1.0">
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="hst:hosts">
   <sv:property sv:name="jcr:primaryType" sv:type="Name">
     <sv:value>hst:virtualhosts</sv:value>
   </sv:property>
@@ -27,12 +26,20 @@
         <sv:property sv:name="hst:channelpath" sv:type="String">
           <sv:value>/hst:hst/hst:channels/myhippoproject</sv:value>
         </sv:property>
-        <sv:property sv:name="hst:mountpoint" sv:type="String">
-          <sv:value>/hst:hst/hst:sites/myhippoproject</sv:value>
-        </sv:property>
         <sv:property sv:name="hst:homepage" sv:type="String">
           <sv:value>root</sv:value>
         </sv:property>
+        <sv:property sv:name="hst:mountpoint" sv:type="String">
+          <sv:value>/hst:hst/hst:sites/myhippoproject</sv:value>
+        </sv:property>
+        <sv:node sv:name="fr">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:mount</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:mountpoint" sv:type="String">
+            <sv:value>/hst:hst/hst:sites/monprojethippo</sv:value>
+          </sv:property>
+        </sv:node>
       </sv:node>
     </sv:node>
   </sv:node>
