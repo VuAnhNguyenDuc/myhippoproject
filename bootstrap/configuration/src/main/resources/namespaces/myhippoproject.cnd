@@ -23,3 +23,6 @@
 [myhippoproject:product] > hippostd:relaxed, hippotranslation:translated, myhippoproject:basedocument
   orderable
 
+[myhippoproject:user] > hippostd:relaxed, hippotranslation:translated, myhippoproject:basedocument
+  orderable
+

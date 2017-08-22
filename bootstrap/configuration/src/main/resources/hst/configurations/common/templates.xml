@@ -138,4 +138,12 @@
       <sv:value>webfile:/freemarker/myhippoproject/custom-search.ftl</sv:value>
     </sv:property>
   </sv:node>
+  <sv:node sv:name="user-register-form">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hst:template</sv:value>
+    </sv:property>
+    <sv:property sv:name="hst:renderpath" sv:type="String">
+      <sv:value>webfile:/freemarker/myhippoproject/user-register-form.ftl</sv:value>
+    </sv:property>
+  </sv:node>
 </sv:node>
