@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="exploded-ear" name="myhippoproject-bootstrap-webfiles:ear exploded">
-    <output-path>$PROJECT_DIR$/classes/artifacts/myhippoproject_bootstrap_webfiles_ear_exploded</output-path>
-    <root id="root">
-      <element id="javaee-facet-resources" facet="myhippoproject-bootstrap-webfiles/javaeeApplication/javaEEApplication" />
-    </root>
-  </artifact>
-</component>
