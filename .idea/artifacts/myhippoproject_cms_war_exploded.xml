@@ -7,6 +7,7 @@
           <element id="module-output" name="myhippoproject-cms" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.apache.wicket:wicket:1.4.17" />
           <element id="library" level="project" name="Maven: org.onehippo.cms7.hst.toolkit-resources.addon.toolkit-cnd:hst-addon-cnd:4.2.1" />
           <element id="library" level="project" name="Maven: org.onehippo.cms7.hst.toolkit-resources.addon:hst-addon-repository:4.2.1" />
           <element id="library" level="project" name="Maven: org.onehippo.cms7.hst.components:hst-resourcebundle-cnd:4.2.1" />

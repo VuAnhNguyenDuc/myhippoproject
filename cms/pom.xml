@@ -12,6 +12,13 @@
   <name>My Hippo Project CMS</name>
   <description>My Hippo Project CMS</description>
   <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.apache.wicket/wicket-core -->
+    <dependency>
+      <groupId>org.apache.wicket</groupId>
+      <artifactId>wicket</artifactId>
+      <version>1.4.17</version>
+    </dependency>
+
     <dependency>
       <groupId>org.onehippo.cms7.hst.dependencies</groupId>
       <artifactId>hst-repository-dependencies</artifactId>

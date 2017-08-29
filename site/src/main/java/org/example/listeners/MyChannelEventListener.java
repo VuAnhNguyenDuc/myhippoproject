@@ -1,14 +1,11 @@
 package org.example.listeners;
 
 import com.google.common.eventbus.Subscribe;
-import org.hippoecm.hst.configuration.channel.Blueprint;
-import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.container.ComponentManager;
 import org.hippoecm.hst.core.container.ComponentManagerAware;
 import org.hippoecm.hst.pagecomposer.jaxrs.api.ChannelEvent;
 
 import javax.jcr.RepositoryException;
-import javax.servlet.ServletRequest;
 
 public class MyChannelEventListener implements ComponentManagerAware {
 
@@ -59,7 +56,6 @@ public class MyChannelEventListener implements ComponentManagerAware {
         String host = channel.substring(sub);
         int from = host.indexOf("'");
         int to = host.indexOf("'",from+1);
-        String result = host.substring(from,to);
-        return result;
+        return host.substring(from,to);
     }
 }
