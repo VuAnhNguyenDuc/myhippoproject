@@ -41,7 +41,7 @@
         <sv:value>Home Page Main</sv:value>
       </sv:property>
       <sv:property sv:name="hst:lastmodified" sv:type="Date">
-        <sv:value>2017-08-15T14:40:34.540+07:00</sv:value>
+        <sv:value>2017-09-01T16:15:36.763+07:00</sv:value>
       </sv:property>
       <sv:property sv:name="hst:xtype" sv:type="String">
         <sv:value>hst.nomarkup</sv:value>
@@ -133,7 +133,7 @@
           <sv:value>on</sv:value>
           <sv:value>08-8-2017 16:00</sv:value>
           <sv:value>08-8-2017 16:00</sv:value>
-          <sv:value/>
+          <sv:value>abc</sv:value>
           <sv:value/>
         </sv:property>
         <sv:property sv:name="hst:template" sv:type="String">
