@@ -41,7 +41,7 @@
         <sv:value>Home Page Main</sv:value>
       </sv:property>
       <sv:property sv:name="hst:lastmodified" sv:type="Date">
-        <sv:value>2017-08-15T14:40:34.540+07:00</sv:value>
+        <sv:value>2017-08-24T10:57:57.900+07:00</sv:value>
       </sv:property>
       <sv:property sv:name="hst:xtype" sv:type="String">
         <sv:value>hst.nomarkup</sv:value>
@@ -176,6 +176,9 @@
         <sv:property sv:name="hst:label" sv:type="String">
           <sv:value>News List Main</sv:value>
         </sv:property>
+        <sv:property sv:name="hst:lastmodified" sv:type="Date">
+          <sv:value>2017-08-24T10:36:01.892+07:00</sv:value>
+        </sv:property>
         <sv:property sv:name="hst:xtype" sv:type="String">
           <sv:value>hst.nomarkup</sv:value>
         </sv:property>
@@ -215,6 +218,23 @@
           </sv:property>
           <sv:property sv:name="hst:template" sv:type="String">
             <sv:value>newslist-main-newslist</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:xtype" sv:type="String">
+            <sv:value>hst.item</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="custom-search">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hst:containeritemcomponent</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:componentclassname" sv:type="String">
+            <sv:value>org.example.components.CustomListComponent</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:label" sv:type="String">
+            <sv:value>Custom Search</sv:value>
+          </sv:property>
+          <sv:property sv:name="hst:template" sv:type="String">
+            <sv:value>custom-search</sv:value>
           </sv:property>
           <sv:property sv:name="hst:xtype" sv:type="String">
             <sv:value>hst.item</sv:value>
