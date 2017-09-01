@@ -31,8 +31,7 @@ import java.io.IOException;
 
 public class MyCustomPerspective extends PanelPluginPerspective {
     private FileUploadField field;
-
-    private static final String SV_VALUE = "sv:value";
+    private TextField path;
 
     private static final ResourceReference PERSPECTIVE_CSS = new CssResourceReference(MyCustomPerspective.class, "MyCustomPerspective.css");
     @SuppressWarnings("unchecked")
@@ -58,6 +57,7 @@ public class MyCustomPerspective extends PanelPluginPerspective {
                             pageParameters.add("error","Only XML file is accepted");
                         } else{
                             HippoSession session = (HippoSession) UserSession.get().getJcrSession();
+                            Node node = null;
                             Boolean nodeExist = false;
                             try {
                                 //"/hst:hst/hst:configurations/myhippoproject/hst:sitemap/about"
@@ -92,7 +92,7 @@ public class MyCustomPerspective extends PanelPluginPerspective {
                         }
                     }
                     pageParameters.add("path",pathValue);
-                    //System.out.println(pathValue);
+                    System.out.println(pathValue);
                 }
             };
 
@@ -112,7 +112,7 @@ public class MyCustomPerspective extends PanelPluginPerspective {
             Node temp = session.getNode(path);
             return temp;
         } catch (RepositoryException e) {
-            return null;
+            return null;//e.printStackTrace();
         }
     }
 
@@ -132,7 +132,7 @@ public class MyCustomPerspective extends PanelPluginPerspective {
         for(int i = 0; i < nodeList.getLength(); i++){
             if(nodeList.item(i).getAttributes().getNamedItem("sv:name").getNodeValue().equals("jcr:uuid")){
                 Element element = (Element) nodeList.item(i);
-                return element.getElementsByTagName(SV_VALUE).item(0).getTextContent();
+                return element.getElementsByTagName("sv:value").item(0).getTextContent();
             }
         }
         return "";
@@ -147,8 +147,8 @@ public class MyCustomPerspective extends PanelPluginPerspective {
             String property = nodeList.item(i).getAttributes().getNamedItem("sv:name").getNodeValue();
             Element element = (Element) nodeList.item(i);
             String value = "";
-            if(element.getElementsByTagName(SV_VALUE).getLength() > 0){
-                value = element.getElementsByTagName(SV_VALUE).item(0).getTextContent();
+            if(element.getElementsByTagName("sv:value").getLength() > 0){
+                value = element.getElementsByTagName("sv:value").item(0).getTextContent();
             } else{
                 value = "";
             }

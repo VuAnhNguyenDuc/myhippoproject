@@ -74,7 +74,7 @@ public class UserRegisterForm extends BaseHstComponent{
             });
 
             if(checkUsername(request,response,formMap.getField("username").getValue())){
-                formMap.addMessage("username-exist", "This username existed");
+                request.setAttribute("username-exist","This username is already taken");
                 response.setRenderParameter("failed","failed");
             } else{
                 String documentPath = wpm.createAndReturn(folderPath, "myhippoproject:user",documentName,true);
@@ -148,6 +148,8 @@ public class UserRegisterForm extends BaseHstComponent{
 
         FormMap formMap = new FormMap();
         FormUtils.populate(request,formMap);
+
+        formMap.addMessage("username-exist", "This username existed");
 
         request.setAttribute("errors", formMap.getMessage());
 

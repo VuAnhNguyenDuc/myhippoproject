@@ -197,15 +197,4 @@
       <sv:value>hst:pages/user-register-form</sv:value>
     </sv:property>
   </sv:node>
-  <sv:node sv:name="test-new-node">
-    <sv:property sv:name="jcr:primaryType" sv:type="Name">
-      <sv:value>hst:sitemapitem</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
-      <sv:value>hst:pages/contentpage</sv:value>
-    </sv:property>
-    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
-      <sv:value>content/test-new-node</sv:value>
-    </sv:property>
-  </sv:node>
 </sv:node>
