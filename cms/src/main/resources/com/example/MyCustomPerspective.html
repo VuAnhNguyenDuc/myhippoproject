@@ -3,10 +3,26 @@
     <!--<div id="my-custom-perspective">
         Hello world!
     </div>-->
-    <form wicket:id="form">
+    <!--<form wicket:id="form">
         Path : <input type="text" wicket:id="path" name="path" id="path" size="50"/>
         XML File : <input type="file" wicket:id="fileUpload" name="fileUpload"/>
         <input type="submit" value="Go">
-    </form>
+    </form>-->
+    <table cellspacing="2" class="dataview">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr wicket:id="users">
+            <td><span wicket:id="username">Username</span></td>
+            <td><span wicket:id="password">Password</span></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!--<div wicket:id="navigator"></div>-->
 </wicket:panel>
 </html>

@@ -149,6 +149,13 @@
         <scope>test</scope>
       </dependency>
 
+      <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>5.1.34</version>
+        <scope>provided</scope>
+      </dependency>
+
     </dependencies>
   </dependencyManagement>
 
@@ -297,6 +304,13 @@
                   <project.basedir>${project.basedir}</project.basedir>
                   <send.usage.statistics.to.hippo>true</send.usage.statistics.to.hippo>
                 </systemProperties>
+                <dependencies>
+                  <dependency>
+                    <groupId>mysql</groupId>
+                    <artifactId>mysql-connector-java</artifactId>
+                    <classpath>extra</classpath>
+                  </dependency>
+                </dependencies>
               </container>
             </configuration>
           </plugin>

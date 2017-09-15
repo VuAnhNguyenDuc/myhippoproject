@@ -5,10 +5,16 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.head.CssHeaderItem;
 import org.apache.wicket.markup.head.IHeaderResponse;
+import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.form.upload.FileUpload;
 import org.apache.wicket.markup.html.form.upload.FileUploadField;
+import org.apache.wicket.markup.html.list.ListItem;
+import org.apache.wicket.markup.html.navigation.paging.PagingNavigation;
+import org.apache.wicket.markup.repeater.Item;
+import org.apache.wicket.markup.repeater.data.DataView;
+import org.apache.wicket.markup.repeater.data.ListDataProvider;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.request.resource.CssResourceReference;
 import org.apache.wicket.request.resource.ResourceReference;
@@ -22,11 +28,43 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import javax.jcr.Node;
+import javax.jcr.NodeIterator;
 import javax.jcr.RepositoryException;
 import javax.jcr.query.Query;
 import javax.jcr.query.QueryResult;
+import javax.swing.text.html.ListView;
+import javax.xml.crypto.Data;
 import java.io.File;
 import java.io.IOException;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+class User implements Serializable{
+    private String username;
+    private String password;
+
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+}
 
 
 public class MyCustomPerspective extends PanelPluginPerspective {
@@ -39,6 +77,40 @@ public class MyCustomPerspective extends PanelPluginPerspective {
         super(context,config);
         setOutputMarkupId(true);
         try {
+            HippoSession session = (HippoSession) UserSession.get().getJcrSession();
+            Query q = session.getWorkspace().getQueryManager().createQuery("select * from nt:base where jcr:primaryType = 'myhippoproject:user'", Query.SQL);
+            ArrayList<User> list = new ArrayList<>();
+            QueryResult r = q.execute();
+            if(r.getNodes().getSize() > 0){
+                NodeIterator users = r.getNodes();
+                while(users.hasNext()){
+                    Node user = users.nextNode();
+                    if(user.hasProperty("myhippoproject:username") && user.hasProperty("myhippoproject:password")){
+                        String username = user.getProperty("myhippoproject:username").getString();
+                        String password = user.getProperty("myhippoproject:password").getString();
+                        User usr = new User(username,password);
+                        if(!usr.getUsername().equals("") && !userExist(usr,list)){
+                            list.add(usr);
+                        }
+                    }
+                }
+            }
+
+            final DataView<User> dataView = new DataView<User>("users",new ListDataProvider<>(list)) {
+                @Override
+                protected void populateItem(Item<User> item) {
+                    final User user = item.getModelObject();
+                    item.add(new Label("username", user.getUsername()));
+                    item.add(new Label("password", user.getPassword()));
+                }
+            };
+
+            add(dataView);
+
+            //dataView.setItemsPerPage(10);
+            //add(dataView);
+            //add(new PagingNavigation("navigator",dataView));
+
             final TextField<String> path = new TextField<String>("path", Model.of(""));
             path.setRequired(true);
 
@@ -107,6 +179,17 @@ public class MyCustomPerspective extends PanelPluginPerspective {
             e.printStackTrace();
         }
     }
+
+    private boolean userExist(User user,ArrayList<User> list){
+        for(int i = 0; i < list.size();i++){
+            User usr = list.get(i);
+            if(usr.getUsername().equals(user.getUsername())){
+                return true;
+            }
+        }
+        return false;
+    }
+
     private Node CheckNodeExistByPath(HippoSession session,String path){
         try {
             Node temp = session.getNode(path);

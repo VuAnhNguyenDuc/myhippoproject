@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="valuemap">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hippostd:folder</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+    <sv:value>hippotranslation:translated</sv:value>
+    <sv:value>mix:versionable</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:uuid" sv:type="String">
+    <sv:value>821fca1e-c91f-4ec9-8052-240b53325b58</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippostd:foldertype" sv:type="String" sv:multiple="true">
+    <sv:value>new-translated-folder</sv:value>
+    <sv:value>new-document</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippotranslation:id" sv:type="String">
+    <sv:value>eb6f7429-a38a-4ac4-8adc-16a4e583bc15</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippotranslation:locale" sv:type="String">
+    <sv:value>en</sv:value>
+  </sv:property>
+  <sv:node sv:name="user_map">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:handle</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>mix:referenceable</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>f8770e44-88b6-49d9-ae53-bc31bfab765b</sv:value>
+    </sv:property>
+    <sv:node sv:name="user_map">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>selection:valuelist</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>hippotranslation:translated</sv:value>
+        <sv:value>mix:referenceable</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>47ff64d8-441c-49a0-8a76-77be92e1a5a9</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:value>live</sv:value>
+        <sv:value>preview</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:id" sv:type="String">
+        <sv:value>d7c29bad-06f6-4de1-a105-5f599103e4e9</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
+        <sv:value>en</sv:value>
+      </sv:property>
+      <sv:node sv:name="selection:listitem">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>selection:listitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="selection:key" sv:type="String">
+          <sv:value>abc</sv:value>
+        </sv:property>
+        <sv:property sv:name="selection:label" sv:type="String">
+          <sv:value>def</sv:value>
+        </sv:property>
+      </sv:node>
+      <sv:node sv:name="selection:listitem">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>selection:listitem</sv:value>
+        </sv:property>
+        <sv:property sv:name="selection:key" sv:type="String">
+          <sv:value>def</sv:value>
+        </sv:property>
+        <sv:property sv:name="selection:label" sv:type="String">
+          <sv:value>ghi</sv:value>
+        </sv:property>
+      </sv:node>
+    </sv:node>
+  </sv:node>
+</sv:node>
