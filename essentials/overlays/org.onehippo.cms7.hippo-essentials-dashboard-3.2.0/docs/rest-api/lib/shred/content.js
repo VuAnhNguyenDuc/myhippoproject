@@ -156,7 +156,7 @@ Content.registerProcessor = function(types,processor) {
 
 // Register the identity processor, which is used for text-based media types.
 var identity = function(x) { return x; }
-  , toString = function(x) { return x.toString(); };
+  , toString = function(x) { return x.toString(); }
 Content.registerProcessor(
   ["text/html","text/plain","text"],
   { parser: identity, stringify: toString });
@@ -188,5 +188,5 @@ var Errors = {
     throw new Error("Attempt to set body attribute of a content object " +
         "when the data attributes was already set.");
   }
-};
+}
 module.exports = Content;

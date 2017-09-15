@@ -17,16 +17,20 @@ import org.hippoecm.hst.content.beans.query.exceptions.FilterException;
 import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
 import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
-import org.hippoecm.hst.content.beans.standard.HippoDocument;
-import org.hippoecm.hst.content.beans.standard.HippoFolder;
+import org.hippoecm.hst.content.beans.standard.HippoBeanIterator;
 import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.request.HstRequestContext;
+import org.onehippo.forge.selection.hst.contentbean.ValueList;
+import org.onehippo.forge.selection.hst.contentbean.ValueListItem;
 import org.onehippo.repository.documentworkflow.DocumentWorkflow;
 
+import javax.jcr.Node;
+import javax.jcr.PropertyIterator;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
+import java.util.Iterator;
 
 public class UserRegisterForm extends BaseHstComponent{
 
@@ -54,9 +58,9 @@ public class UserRegisterForm extends BaseHstComponent{
             return;
         }
 
-        String siteContentBasePath = request.getRequestContext().getSiteContentBasePath();
+        String siteContentBasePath = "/" + request.getRequestContext().getSiteContentBasePath();
 
-        String folderPath = "/" + siteContentBasePath + "/users";
+        String folderPath = siteContentBasePath + "/users";
 
         String documentName = "User " + formMap.getField("username").getValue();
 
@@ -77,19 +81,48 @@ public class UserRegisterForm extends BaseHstComponent{
                 request.setAttribute("username-exist","This username is already taken");
                 response.setRenderParameter("failed","failed");
             } else{
-                String documentPath = wpm.createAndReturn(folderPath, "myhippoproject:user",documentName,true);
+                /*String documentPath = wpm.createAndReturn(folderPath, "myhippoproject:user",documentName,true);
 
                 User user = (User) wpm.getObject(documentPath);
 
                 if(user == null){
                     throw new HstComponentException("Failed to add User");
-                }
+                }*/
 
-                user.setUsername(formMap.getField("username").getValue());
+               /* user.setUsername(formMap.getField("username").getValue());
                 user.setPassword(formMap.getField("password").getValue());
                 user.setEmail(formMap.getField("email").getValue());
+                wpm.update(user);*/
 
-                wpm.update(user);
+
+                /*User user = (User) wpm.getObject(folderPath+"/user-bazen");
+                if(user!=null){
+                    user.setUsername("paladin2412");
+                    wpm.update(user);
+                }*/
+
+                String valuePath = siteContentBasePath + "/valuemap";
+                ValueList valueList = (ValueList) wpm.getObject(valuePath+"/user_map/user_map");
+
+                Node userMap = session.getNode(valuePath+"/user_map/user_map");
+                Iterator<Node> nodeIterator = userMap.getNodes();
+                for(Iterator<Node> it = nodeIterator; it.hasNext();){
+                    Node node = it.next();
+                    String nodePath = node.getPath();
+
+                    if(node.hasProperty("selection:key")){
+                        System.out.println(node.getProperty("selection:key").getString());
+                        node.setProperty("selection:key","bazen2412");
+                    }
+                    if(node.hasProperty("selection:label")){
+                        System.out.println(node.getProperty("selection:label").getString());
+                        node.setProperty("selection:label","paladin2412");
+                    }
+                    wpm.save();
+                    //session.save();
+                }
+                /*String newListItem = wpm.createAndReturn(valuePath+"/user_map/user_map", "selection:listitem","selection:listitem",false);*/
+
                 response.setRenderParameter("success","success");
             }
         } catch (RepositoryException e) {
@@ -99,10 +132,9 @@ public class UserRegisterForm extends BaseHstComponent{
         } catch (ObjectBeanManagerException e) {
             e.printStackTrace();
         }
-
     }
 
-    private boolean checkUsername(HstRequest request, HstResponse response, String username){
+    private HippoBean getUserByUsername(HstRequest request, HstResponse response, String username){
         HstRequestContext context = request.getRequestContext();
         HippoBean scope = context.getSiteContentBaseBean();
 
@@ -121,12 +153,22 @@ public class UserRegisterForm extends BaseHstComponent{
 
             HstQueryResult result = hstQuery.execute();
             if(result.getTotalSize() > 0){
-                return true;
+                HippoBeanIterator beans = result.getHippoBeans();
+                HippoBean temp = beans.nextHippoBean();
+                //User temp1 = (User) beans.next();
+                return temp;
             }
         } catch (QueryException e) {
             e.printStackTrace();
         }
-        return false;
+        return null;
+    }
+
+    private boolean checkUsername(HstRequest request, HstResponse response, String username){
+        if(getUserByUsername(request,response,username) == null){
+            return false;
+        }
+        return true;
     }
 
     protected Filter createQueryFilter(final HstRequest request, final HstQuery query, String searchField, String queryParam) throws FilterException {
@@ -149,9 +191,10 @@ public class UserRegisterForm extends BaseHstComponent{
         FormMap formMap = new FormMap();
         FormUtils.populate(request,formMap);
 
-        formMap.addMessage("username-exist", "This username existed");
-
-        request.setAttribute("errors", formMap.getMessage());
+        //formMap.addMessage("username-exist", "This username existed");
+        if(!formMap.getMessage().isEmpty()){
+            request.setAttribute("errors", formMap.getMessage());
+        }
 
     }
 }

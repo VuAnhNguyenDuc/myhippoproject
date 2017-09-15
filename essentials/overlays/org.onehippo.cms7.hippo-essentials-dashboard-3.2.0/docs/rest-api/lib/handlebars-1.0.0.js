@@ -26,7 +26,7 @@ THE SOFTWARE.
 var Handlebars = {};
 
 (function(Handlebars, undefined) {
-
+;
 // lib/handlebars/base.js
 
 Handlebars.VERSION = "1.0.0";
@@ -182,6 +182,7 @@ Handlebars.registerHelper('log', function(context, options) {
   var level = options.data && options.data.level != null ? parseInt(options.data.level, 10) : 1;
   Handlebars.log(level, context);
 });
+;
 // lib/handlebars/compiler/parser.js
 /* Jison generated parser */
 var handlebars = (function(){
@@ -579,7 +580,7 @@ pushState:function begin(condition) {
 lexer.options = {};
 lexer.performAction = function anonymous(yy,yy_,$avoiding_name_collisions,YY_START) {
 
-var YYSTATE=YY_START;
+var YYSTATE=YY_START
 switch($avoiding_name_collisions) {
 case 0: yy_.yytext = "\\"; return 14; 
 break;
@@ -657,11 +658,11 @@ break;
 };
 lexer.rules = [/^(?:\\\\(?=(\{\{)))/,/^(?:[^\x00]*?(?=(\{\{)))/,/^(?:[^\x00]+)/,/^(?:[^\x00]{2,}?(?=(\{\{|$)))/,/^(?:[\s\S]*?--\}\})/,/^(?:\{\{>)/,/^(?:\{\{#)/,/^(?:\{\{\/)/,/^(?:\{\{\^)/,/^(?:\{\{\s*else\b)/,/^(?:\{\{\{)/,/^(?:\{\{&)/,/^(?:\{\{!--)/,/^(?:\{\{![\s\S]*?\}\})/,/^(?:\{\{)/,/^(?:=)/,/^(?:\.(?=[}\/ ]))/,/^(?:\.\.)/,/^(?:[\/.])/,/^(?:\s+)/,/^(?:\}\}\})/,/^(?:\}\})/,/^(?:"(\\["]|[^"])*")/,/^(?:'(\\[']|[^'])*')/,/^(?:@)/,/^(?:true(?=[}\s]))/,/^(?:false(?=[}\s]))/,/^(?:-?[0-9]+(?=[}\s]))/,/^(?:[^\s!"#%-,\.\/;->@\[-\^`\{-~]+(?=[=}\s\/.]))/,/^(?:\[[^\]]*\])/,/^(?:.)/,/^(?:$)/];
 lexer.conditions = {"mu":{"rules":[5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31],"inclusive":false},"emu":{"rules":[3],"inclusive":false},"com":{"rules":[4],"inclusive":false},"INITIAL":{"rules":[0,1,2,31],"inclusive":true}};
-return lexer;})();
+return lexer;})()
 parser.lexer = lexer;
 function Parser () { this.yy = {}; }Parser.prototype = parser;parser.Parser = Parser;
 return new Parser;
-})();
+})();;
 // lib/handlebars/compiler/base.js
 
 Handlebars.Parser = handlebars;
@@ -674,6 +675,7 @@ Handlebars.parse = function(input) {
   Handlebars.Parser.yy = Handlebars.AST;
   return Handlebars.Parser.parse(input);
 };
+;
 // lib/handlebars/compiler/ast.js
 Handlebars.AST = {};
 
@@ -804,6 +806,7 @@ Handlebars.AST.CommentNode = function(comment) {
   this.type = "comment";
   this.comment = comment;
 };
+;
 // lib/handlebars/utils.js
 
 var errorProps = ['description', 'fileName', 'lineNumber', 'message', 'name', 'number', 'stack'];
@@ -878,6 +881,7 @@ Handlebars.Utils = {
     }
   }
 };
+;
 // lib/handlebars/compiler/compiler.js
 
 /*jshint eqnull:true*/
@@ -1006,7 +1010,7 @@ Compiler.prototype = {
     for(var i=0, l=result.depths.list.length; i<l; i++) {
       depth = result.depths.list[i];
 
-      if(depth < 2) {  }
+      if(depth < 2) { continue; }
       else { this.addDepth(depth - 1); }
     }
 
@@ -2169,6 +2173,7 @@ Handlebars.compile = function(input, options) {
   };
 };
 
+;
 // lib/handlebars/runtime.js
 
 Handlebars.VM = {
@@ -2267,6 +2272,7 @@ Handlebars.VM = {
 };
 
 Handlebars.template = Handlebars.VM.template;
+;
 // lib/handlebars/browser-suffix.js
 })(Handlebars);
-
+;
