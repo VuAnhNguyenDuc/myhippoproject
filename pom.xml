@@ -304,13 +304,6 @@
                   <project.basedir>${project.basedir}</project.basedir>
                   <send.usage.statistics.to.hippo>true</send.usage.statistics.to.hippo>
                 </systemProperties>
-                <dependencies>
-                  <dependency>
-                    <groupId>mysql</groupId>
-                    <artifactId>mysql-connector-java</artifactId>
-                    <classpath>extra</classpath>
-                  </dependency>
-                </dependencies>
               </container>
             </configuration>
           </plugin>
